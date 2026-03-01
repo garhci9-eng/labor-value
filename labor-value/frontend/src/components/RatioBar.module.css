@@ -1,0 +1,75 @@
+.wrap { margin: 1rem 0; }
+
+.labels {
+  display: flex; justify-content: space-between;
+  font-size: 0.75rem; color: var(--text2);
+  margin-bottom: 0.5rem;
+}
+.labelLeft, .labelRight { display: flex; align-items: center; gap: 6px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.multiplierBadge {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  background: rgba(249,115,22,0.15); color: #fb923c;
+  border: 1px solid rgba(249,115,22,0.3);
+  padding: 1px 6px; border-radius: 3px; font-weight: 600;
+}
+
+.barWrap { position: relative; user-select: none; margin-bottom: 0.6rem; }
+.bar {
+  height: 36px; border-radius: 6px;
+  display: flex; overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border2);
+}
+.intellSide {
+  background: linear-gradient(135deg, #1a3a8f, #2d6ef5);
+  transition: width 0.05s;
+  display: flex; align-items: center; justify-content: center;
+  min-width: 0;
+}
+.physSide {
+  flex: 1;
+  background: linear-gradient(135deg, #c2440a, #f97316);
+  transition: width 0.05s;
+  display: flex; align-items: center; justify-content: center;
+}
+.barLabel { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9); }
+
+.handle {
+  position: absolute; top: 50%; transform: translate(-50%, -50%);
+  width: 18px; height: 44px;
+  background: var(--bg2);
+  border: 2px solid var(--border2);
+  border-radius: 4px;
+  cursor: col-resize;
+  z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  transition: left 0.05s;
+}
+.handle::before {
+  content: '⋮⋮';
+  font-size: 0.6rem; color: var(--text3); letter-spacing: -2px;
+}
+.handle:hover { border-color: var(--gold); }
+
+.quickBtns { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.qBtn {
+  flex: 1; min-width: 48px;
+  font-family: var(--font-mono); font-size: 0.62rem;
+  padding: 4px 0;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text3);
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+.qBtn:hover { border-color: var(--border2); color: var(--text2); }
+.qBtnActive { background: var(--surface3); border-color: var(--gold); color: var(--gold2); }
+
+.weightedNote {
+  font-size: 0.75rem; color: var(--text3);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 5px;
+}

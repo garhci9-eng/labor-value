@@ -1,0 +1,84 @@
+.wrap { animation: fadeUp 0.3s cubic-bezier(0.16,1,0.3,1); }
+.title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.3rem; }
+.sub { color: var(--text2); font-size: 0.8rem; margin-bottom: 1.5rem; }
+.section { margin-bottom: 2rem; }
+
+.principleGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+.principleCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem;
+  transition: border-color 0.15s;
+}
+.principleCard:hover { border-color: var(--gold); }
+.princIcon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.princTitle { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
+.princTitleEn { font-family: var(--font-mono); font-size: 0.62rem; color: var(--gold2); margin-bottom: 0.5rem; }
+.princDesc { font-size: 0.78rem; color: var(--text2); line-height: 1.55; margin-bottom: 0.4rem; }
+.princDescEn { font-size: 0.72rem; color: var(--text3); line-height: 1.5; font-style: italic; }
+
+.formulaBox {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.formulaTitle {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+.formula {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+}
+.fVar { color: var(--gold2); font-weight: 700; }
+.fOp { color: var(--text3); }
+.fConst { color: var(--cyan); }
+.fGroup { color: var(--text); }
+.fRatio { color: var(--blue2); }
+.formulaVars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+.formulaVars strong { color: var(--gold2); }
+
+.intensityTable { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.iRow {
+  display: grid;
+  grid-template-columns: 160px 80px 60px 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+.iRow:last-child { border-bottom: none; }
+.iRow:nth-child(even) { background: var(--surface); }
+.iLevel { font-weight: 600; }
+.iRange { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text3); }
+.iMult { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; }
+.iBar { height: 5px; background: var(--surface3); border-radius: 2px; overflow: hidden; }
+
+@media (max-width: 640px) {
+  .principleGrid { grid-template-columns: 1fr; }
+  .formulaVars { grid-template-columns: 1fr 1fr; }
+  .iRow { grid-template-columns: 1fr 60px 50px; }
+  .iBar { display: none; }
+}
